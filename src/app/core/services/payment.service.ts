@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { environment } from 'environment';
 export interface RazorpayOrder {
   id: string;
   entity: string;
@@ -22,7 +22,7 @@ export interface PaymentResponse {
   providedIn: 'root'
 })
 export class PaymentService {
-  private apiUrl = '/api/payment';
+  private apiUrl = `${environment.apiUrl}/payment`;
 
   constructor(private http: HttpClient) { }
 

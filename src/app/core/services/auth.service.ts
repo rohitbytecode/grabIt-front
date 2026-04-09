@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { AuthResponse, User } from '@shared/models/interfaces';
-
+import { environment } from 'environment';
 @Injectable({
     providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = '/api/auth';
+    private apiUrl = `${environment.apiUrl}/auth`;
     private currentUserSubject = new BehaviorSubject<User | null>(this.getUserFromStorage());
     public currentUser$ = this.currentUserSubject.asObservable();
 

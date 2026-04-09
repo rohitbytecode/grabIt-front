@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { environment } from 'environment';
 export interface DashboardMetrics {
     users: {
         totalCustomers: number;
@@ -52,7 +52,7 @@ export interface DashboardMetrics {
     providedIn: 'root'
 })
 export class MetricsService {
-    private apiUrl = '/api/metrics';
+    private apiUrl = `${environment.apiUrl}/metrics`;
 
     constructor(private http: HttpClient) { }
 
