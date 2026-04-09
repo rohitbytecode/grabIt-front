@@ -1,12 +1,12 @@
 {
   "/api": {
-    "target": "http://localhost:5000",
-    "secure": false,
+    "target": "https://grabit-backend-cvvu.onrender.com",
+    "secure": true,
     "changeOrigin": true
   },
   "/uploads": {
-    "target": "http://localhost:5000",
-    "secure": false,
+    "target": "https://grabit-backend-cvvu.onrender.com",
+    "secure": true,
     "changeOrigin": true
   }
 }
